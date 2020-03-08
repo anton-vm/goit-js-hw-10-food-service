@@ -51,6 +51,7 @@ function switchTheme (event) {
     }
     
 }
+console.log("Hello");
 
 switcher.addEventListener('change', switchTheme)
 
