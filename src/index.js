@@ -8,9 +8,12 @@ const menuItems = {
 }
 
 function renderMenu (menu) {
-    const menuConstruct = menu.map(el => foodTemplate(el)).join('');
+    // const menuConstruct = menu.map(el => foodTemplate(el)).join('');
+    const menuConstruct = foodTemplate(menu)
+    console.log(menuConstruct);
     menuItems.menuFood.insertAdjacentHTML('beforeend', menuConstruct)
 }
+
 renderMenu(menu)
 
 
@@ -46,6 +49,7 @@ function switchTheme (event) {
         body.classList.add(Theme.LIGHT)
         localStorage.setItem('theme', Theme.LIGHT)
     }
+    
 }
 
 switcher.addEventListener('change', switchTheme)
