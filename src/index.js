@@ -8,10 +8,9 @@ const menuItems = {
 }
 
 function renderMenu (menu) {
-    // const menuConstruct = menu.map(el => foodTemplate(el)).join('');
-    const menuConstruct = foodTemplate(menu)
-    console.log(menuConstruct);
-    menuItems.menuFood.insertAdjacentHTML('beforeend', menuConstruct)
+
+
+    menuItems.menuFood.insertAdjacentHTML('beforeend', foodTemplate(menu))
 }
 
 renderMenu(menu)
@@ -24,7 +23,7 @@ const Theme = {
 
   const actualTheme = localStorage.getItem('theme');
 
-  console.log(actualTheme);
+//   console.log(actualTheme);
 
 const body = document.querySelector('body');
 const switcher = document.querySelector('#theme-switch-control')
@@ -49,9 +48,10 @@ function switchTheme (event) {
         body.classList.add(Theme.LIGHT)
         localStorage.setItem('theme', Theme.LIGHT)
     }
+    // без else не работает.... или что имеется в виду?
     
 }
-console.log("Hello");
+
 
 switcher.addEventListener('change', switchTheme)
 
