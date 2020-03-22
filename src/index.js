@@ -43,11 +43,12 @@ function switchTheme (event) {
         body.classList.remove(Theme.LIGHT)
         body.classList.add(Theme.DARK)
         localStorage.setItem('theme', Theme.DARK)
-    } else {
+        return
+    } 
         body.classList.remove(Theme.DARK)
         body.classList.add(Theme.LIGHT)
         localStorage.setItem('theme', Theme.LIGHT)
-    }
+   
     // без else не работает.... или что имеется в виду?
     
 }
